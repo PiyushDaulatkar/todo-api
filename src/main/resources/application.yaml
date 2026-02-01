@@ -1,3 +1,21 @@
 spring:
   application:
     name: TodoApi
+  graphql:
+    graphiql:
+       enabled: true
+    http:
+      path: /grpahql
+  # PostgreSQL
+  datasource:
+    url: jdbc:postgresql://172.17.0.3:5432/tododb
+    username: postgres
+    password: password
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
