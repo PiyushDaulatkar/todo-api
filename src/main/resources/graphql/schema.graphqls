@@ -2,6 +2,10 @@ type Query {
  users: [User!]!
 }
 
+type Mutation {
+ createUser(email: String, name:String!): User!
+}
+
 type User {
  id: String!
  email: String!
