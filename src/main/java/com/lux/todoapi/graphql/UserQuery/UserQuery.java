@@ -1,4 +1,4 @@
-package com.lux.todoapi.graphql.HelloQuery;
+package com.lux.todoapi.graphql.UserQuery;
 
 import com.lux.todoapi.entity.User;
 import com.lux.todoapi.service.UserService;
