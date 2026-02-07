@@ -1,29 +1,35 @@
 type Query {
- users: [User!]!
- todoLists: [TodoList!]!
+  users: [User!]!
+  todoLists: [TodoList!]!
 }
 
 type Mutation {
- createUser(email: String, name:String!): User!
+  createUser(email: String!, name: String!): User!
+  createTodoList(
+    userId: ID!
+    title: String!
+    description: String
+    isPublic: Boolean!
+  ): TodoList!
 }
 
 type User {
- id: String!
- email: String!
- name: String!
+  id: String!
+  email: String!
+  name: String!
 }
 
 type TodoList {
- id:String!
- title: String!
- description: String!
- isPublic: Boolean!
- owner: User!
- items: [TodoItem!]!
+  id: String!
+  title: String!
+  description: String!
+  isPublic: Boolean!
+  owner: User!
+  items: [TodoItem!]!
 }
 
 type TodoItem {
- id: ID!
- text: String!
- completed: Boolean!
+  id: ID!
+  text: String!
+  completed: Boolean!
 }
