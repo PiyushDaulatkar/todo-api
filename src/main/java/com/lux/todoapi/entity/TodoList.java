@@ -53,6 +53,10 @@ public class TodoList {
         return isPublic;
     }
 
+    public void setPublic(boolean isPublic) {
+        this.isPublic = isPublic;
+    }
+
     public User getOwner() {
         return owner;
     }
