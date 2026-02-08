@@ -38,4 +38,12 @@ public class TodoListResolver {
     public TodoItem addTodoItem(@Argument Long todoListId, @Argument String text) {
         return todoListService.addTodoItem(todoListId, text);
     }
+
+    @MutationMapping
+    public TodoItem markTodoItemCompleted(
+            @Argument Long todoItemId,
+            @Argument boolean completed) {
+
+        return todoListService.markTodoItemCompleted(todoItemId, completed);
+    }
 }

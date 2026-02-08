@@ -45,4 +45,12 @@ public class TodoListService {
         TodoItem todoItem = new TodoItem(text, todoList);
         return todoItemRepository.save(todoItem);
     }
+
+    public TodoItem markTodoItemCompleted(Long todoItemId, boolean completed) {
+        TodoItem todoItem = todoItemRepository.findById(todoItemId)
+                .orElseThrow(() -> new RuntimeException("TodoItem not found."));
+
+        todoItem.setCompleted(completed);
+        return todoItemRepository.save(todoItem);
+    }
 }
