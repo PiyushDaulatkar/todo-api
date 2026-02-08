@@ -1,5 +1,6 @@
 package com.lux.todoapi.resolver;
 
+import com.lux.todoapi.entity.TodoItem;
 import com.lux.todoapi.entity.TodoList;
 import com.lux.todoapi.service.TodoListService;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -31,5 +32,10 @@ public class TodoListResolver {
             @Argument boolean isPublic) {
 
         return todoListService.createTodoList(userId, title, description, isPublic);
+    }
+
+    @MutationMapping
+    public TodoItem addTodoItem(@Argument Long todoListId, @Argument String text) {
+        return todoListService.addTodoItem(todoListId, text);
     }
 }
