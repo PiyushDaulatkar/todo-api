@@ -20,7 +20,8 @@ public class TodoItem {
     @JoinColumn(name = "todo_list_id")
     private TodoList todoList;
 
-    protected TodoItem() {};
+    protected TodoItem() {
+    };
 
     public TodoItem(String text, TodoList todoList) {
         this.text = text;
@@ -41,5 +42,9 @@ public class TodoItem {
 
     public TodoList getTodoList() {
         return todoList;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }

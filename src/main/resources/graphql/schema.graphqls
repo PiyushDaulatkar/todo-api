@@ -12,6 +12,7 @@ type Mutation {
     isPublic: Boolean!
   ): TodoList!
   addTodoItem(todoListId: ID!, text: String!): TodoItem!
+  markTodoItemCompleted(todoItemId: ID!, completed: Boolean!): TodoItem!
 }
 
 type User {
