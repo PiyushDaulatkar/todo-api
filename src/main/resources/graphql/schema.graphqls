@@ -11,6 +11,7 @@ type Mutation {
     description: String
     isPublic: Boolean!
   ): TodoList!
+  addTodoItem(todoListId: ID!, text: String!): TodoItem!
 }
 
 type User {
