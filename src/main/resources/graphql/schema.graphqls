@@ -13,6 +13,7 @@ type Mutation {
   ): TodoList!
   addTodoItem(todoListId: ID!, text: String!): TodoItem!
   markTodoItemCompleted(todoItemId: ID!, completed: Boolean!): TodoItem!
+  login(email: String!): LoginResponse!
 }
 
 type User {
@@ -34,4 +35,8 @@ type TodoItem {
   id: ID!
   text: String!
   completed: Boolean!
+}
+
+type LoginResponse {
+  token: String!
 }

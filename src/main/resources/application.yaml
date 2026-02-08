@@ -3,9 +3,9 @@ spring:
     name: TodoApi
   graphql:
     graphiql:
-       enabled: true
+      enabled: true
     http:
-      path: /grpahql
+      path: /graphql
   # PostgreSQL
   datasource:
     url: jdbc:postgresql://172.17.0.3:5432/tododb
@@ -19,3 +19,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  # JWT
+jwt:
+  secret: m7F9q0P3aQ7cVYx4yMZ5nC8kR3wAq6E0L9xZB2H1P5U=
+  expiration: 3600000 # 1 hour in ms
+
